@@ -20,6 +20,10 @@ class AppController {
             console.log(err)
         }
     }
+
+    createLocation(location, realTemp, feelsLikeTemp, rain, sunrise, sunset) {
+        return new Location(location, realTemp, feelsLikeTemp, rain, sunrise, sunset);
+    }
 }
 
 export default AppController;
