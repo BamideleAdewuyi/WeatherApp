@@ -26,7 +26,7 @@ class AppController {
     }
 
     getLocation(json) {
-
+        return json.resolvedAddress;
     }
 
     getRealTemp(json) {
