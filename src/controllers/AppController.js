@@ -24,6 +24,30 @@ class AppController {
     createLocation(location, realTemp, feelsLikeTemp, rain, sunrise, sunset) {
         return new Location(location, realTemp, feelsLikeTemp, rain, sunrise, sunset);
     }
+
+    getLocation(json) {
+
+    }
+
+    getRealTemp(json) {
+        
+    }
+
+    getFeelsLikeTemp(json) {
+
+    }
+
+    getRain(json) {
+
+    }
+
+    getSunrise(json) {
+        
+    }
+
+    getSunset(json) {
+        
+    }
 }
 
 export default AppController;
