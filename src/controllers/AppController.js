@@ -1,5 +1,3 @@
-import Location from "../models/Location";
-
 class AppController {
     constructor() {
         this.location;
