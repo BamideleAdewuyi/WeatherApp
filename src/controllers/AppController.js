@@ -14,10 +14,10 @@ class AppController {
                 throw new Error(response.status)
             }
             const data = await response.json();
-            console.log(data);
             return data;
         } catch(err) {
-            console.log(err)
+            console.log("Something went wrong: " + err)
+            return err;
         }
     }
 
