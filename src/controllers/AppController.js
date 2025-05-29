@@ -23,27 +23,27 @@ class AppController {
         this.location = json;
     }
 
-    getLocation(json) {
-        return json.resolvedAddress;
+    getLocation() {
+        return this.location.resolvedAddress;
     }
 
-    getRealTemp(json) {
+    getRealTemp() {
         
     }
 
-    getFeelsLikeTemp(json) {
+    getFeelsLikeTemp() {
 
     }
 
-    getRain(json) {
+    getRain() {
 
     }
 
-    getSunrise(json) {
+    getSunrise() {
         
     }
 
-    getSunset(json) {
+    getSunset() {
         
     }
 }
