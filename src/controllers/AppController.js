@@ -27,8 +27,8 @@ class AppController {
         return this.location.resolvedAddress;
     }
 
-    getRealTemp() {
-        
+    getRealCurrentTemp(day) {
+        return this.location.days[day].temp;
     }
 
     getFeelsLikeTemp() {
