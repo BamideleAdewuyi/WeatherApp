@@ -25,6 +25,10 @@ class AppController {
         return new Location(json);
     }
 
+    setLocation(json) {
+        this.location = json;
+    }
+
     getLocation(json) {
         return json.resolvedAddress;
     }
