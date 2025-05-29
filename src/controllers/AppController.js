@@ -2,7 +2,7 @@ import Location from "../models/Location";
 
 class AppController {
     constructor() {
-        this.locations = [];
+        this.location;
     }
 
     async getLocationData(location) {
