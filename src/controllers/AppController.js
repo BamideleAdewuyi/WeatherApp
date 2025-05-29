@@ -19,10 +19,6 @@ class AppController {
         }
     }
 
-    createLocation(json) {
-        return new Location(json);
-    }
-
     setLocation(json) {
         this.location = json;
     }
