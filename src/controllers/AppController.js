@@ -27,12 +27,12 @@ class AppController {
         return this.location.resolvedAddress;
     }
 
-    getCurrentRealTemp(day) {
-        return this.location.days[day].temp;
+    getMaxTemp() {
+
     }
 
-    getCurrentFeelsLikeTemp(day) {
-        return this.location.days[day].feelslike;
+    getMinTemp() {
+
     }
 
     getRain() {
