@@ -35,7 +35,7 @@ class AppController {
 
     }
 
-    getRain() {
+    getPrecipProb() {
 
     }
 
