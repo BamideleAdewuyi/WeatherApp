@@ -57,7 +57,7 @@ class AppController {
     }
 
     getIcon(dayOrHour) {
-
+        return dayOrHour.icon;
     }
 
     getLinkDisplayData() {
