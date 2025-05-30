@@ -32,28 +32,34 @@ class AppController {
     }
 
     getHour(day, hour) {
-        return day[hour];
+        return day.hours[hour];
     }
 
-    getMaxTemp() {
-
+    getMaxTemp(day) {
+        return day.tempmax;
     }
 
-    getMinTemp() {
-
+    getMinTemp(day) {
+        return day.tempmin;
     }
 
-    getPrecipProb() {
-
+    
+    getSunrise(day) {
+        return day.sunrise;
+    }
+    
+    getSunset(day) {
+        return day.sunset;
     }
 
-    getSunrise() {
+    getPrecipProb(day) {
+        return day.precipprob;
+    }
+
+    getLinkDisplayData() {
         
     }
 
-    getSunset() {
-        
-    }
 }
 
 export default AppController;
