@@ -31,6 +31,10 @@ class AppController {
         return this.location.days[day];
     }
 
+    getDate(day) {
+        return day.datetime;
+    }
+    
     getHour(day, hour) {
         return day.hours[hour];
     }
@@ -52,16 +56,17 @@ class AppController {
         return day.sunset;
     }
 
-    getPrecipProb(day) {
-        return day.precipprob;
-    }
 
     getIcon(dayOrHour) {
         return dayOrHour.icon;
     }
+    
+    getPrecipProb(day) {
+        return day.precipprob;
+    }
 
     getLinkDisplayData() {
-
+        
     }
 
 }
