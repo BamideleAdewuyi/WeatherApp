@@ -31,6 +31,10 @@ class AppController {
         return this.location.days[day];
     }
 
+    getHour(day, hour) {
+        return day[hour];
+    }
+
     getMaxTemp() {
 
     }
