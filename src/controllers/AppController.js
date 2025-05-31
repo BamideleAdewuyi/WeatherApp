@@ -61,6 +61,10 @@ class AppController {
     }
 
     getFeelsLikeTemp(hour) {
+
+    }
+
+    getHumidity(hour) {
         
     }
 
