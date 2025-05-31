@@ -74,6 +74,10 @@ class AppController {
         }
     }
 
+    getDayTabDisplayData(day) {
+        
+    }
+
 }
 
 export default AppController;
