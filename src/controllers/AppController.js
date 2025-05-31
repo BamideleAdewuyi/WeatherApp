@@ -65,7 +65,7 @@ class AppController {
     }
 
     getHumidity(hour) {
-        
+
     }
 
     getIcon(dayOrHour) {
@@ -97,7 +97,13 @@ class AppController {
     }
 
     getForecastContent(day, hours) {
-
+        const date = this.getDate(day);
+        const content = {}
+        for (let hour = 0; hour < hours; hour++) {
+            content.hour = {
+                
+            }
+        }
     };
 
 }
