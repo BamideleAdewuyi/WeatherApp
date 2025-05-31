@@ -85,6 +85,10 @@ class AppController {
         }
     }
 
+    getForecastContent(day, hours) {
+
+    };
+
 }
 
 export default AppController;
