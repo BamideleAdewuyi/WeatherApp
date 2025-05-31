@@ -56,6 +56,13 @@ class AppController {
         return day.sunset;
     }
 
+    getTemp(hour) {
+
+    }
+
+    getFeelsLikeTemp(hour) {
+        
+    }
 
     getIcon(dayOrHour) {
         return dayOrHour.icon;
