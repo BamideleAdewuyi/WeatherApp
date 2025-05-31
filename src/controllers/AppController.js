@@ -34,7 +34,7 @@ class AppController {
     getDate(day) {
         return day.datetime;
     }
-    
+
     getHour(day, hour) {
         return day.hours[hour];
     }
@@ -65,8 +65,13 @@ class AppController {
         return day.precipprob;
     }
 
-    getLinkDisplayData() {
-        
+    getLinkDisplayData(day) {
+        return {
+            date: this.getDate(day),
+            icon: this.getIcon(day),
+            maxTemp: this.getMaxTemp(day),
+            minTemp: this.getMinTemp(day)
+        }
     }
 
 }
