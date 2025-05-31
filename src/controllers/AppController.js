@@ -75,7 +75,14 @@ class AppController {
     }
 
     getDayTabDisplayData(day) {
-        
+        return {
+            date: this.getDate(day),
+            icon: this.getDate(day),
+            maxTemp: this.getMaxTemp(day),
+            minTemp: this.getMinTemp(day),
+            sunrise: this.getSunrise(day),
+            sunset: this.getSunset(day)
+        }
     }
 
 }
