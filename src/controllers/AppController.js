@@ -61,8 +61,8 @@ class AppController {
         return dayOrHour.icon;
     }
     
-    getPrecipProb(day) {
-        return day.precipprob;
+    getPrecipProb(hour) {
+        return hour.precipprob;
     }
 
     getLinkDisplayData(day) {
