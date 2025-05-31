@@ -57,15 +57,15 @@ class AppController {
     }
 
     getTemp(hour) {
-
+        return hour.temp;
     }
 
     getFeelsLikeTemp(hour) {
-
+        return hour.feelslike;
     }
 
     getHumidity(hour) {
-
+        return hour.humidity;
     }
 
     getIcon(dayOrHour) {
@@ -101,7 +101,7 @@ class AppController {
         const content = {}
         for (let hour = 0; hour < hours; hour++) {
             content.hour = {
-                
+
             }
         }
     };
