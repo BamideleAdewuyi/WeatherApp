@@ -39,6 +39,10 @@ class AppController {
         return day.hours[hour];
     }
 
+    getCurrentHour() {
+
+    };
+
     getMaxTemp(day) {
         return day.tempmax;
     }
