@@ -96,17 +96,18 @@ class AppController {
         }
     }
 
-    getForecastContent(day, hours) {
+    getForecastContent(day, start, end) {
         const date = this.getDate(this.getDay(day));
         const content = {}
-        for (let i = 0; i < hours; i++) {
+        for (let i = start; i < end; i++) {
             const hour = this.getHour(this.getDay(day), i)
-            content.i = {
+            content[i] = {
                 temp: this.getTemp(hour),
                 feelsLikeTemp: this.getFeelsLikeTemp(hour),
                 humidity: this.getHumidity(hour),
                 icon: this.getIcon(hour),
-                precipProb: this.getPrecipProb(hour)
+                precipProb: this.getPrecipProb(hour),
+                date: date
             }
         }
         return content;
