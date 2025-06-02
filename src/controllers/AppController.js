@@ -40,9 +40,14 @@ class AppController {
     }
 
     getCurrentHour() {
-        const time = this.location.currentConditions.datetime
-        const offset = this.location.tzoffset
-        return Number(time.substring(0, 2)) + offset;
+        const gmtDate = new Date().toGMTString();
+        const gmtHour = Number(gmtDate.substring(17, 19));
+        const offset = Number(this.location.tzoffset);
+        let currentHour = gmtHour + offset;
+        if (currentHour >= 24) {
+            currentHour -= 24
+        }
+        return currentHour
     };
 
     getMaxTemp(day) {
