@@ -40,7 +40,9 @@ class AppController {
     }
 
     getCurrentHour() {
-
+        const time = this.location.currentConditions.datetime
+        const offset = this.location.tzoffset
+        return Number(time.substring(0, 2)) + offset;
     };
 
     getMaxTemp(day) {
