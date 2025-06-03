@@ -19,3 +19,5 @@ class AppView {
         this.container.append(form)
     }
 }
+
+export default AppView;
