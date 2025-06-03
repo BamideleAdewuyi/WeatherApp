@@ -126,22 +126,14 @@ class AppController {
 
     getNextWeekData() {
         const nextWeekData = {}
-        const today = this.getDay(0);
         const currentHour = this.getCurrentHour()
-        const todayData = {
-            linkDisplay: this.getLinkDisplayData(today),
-            dayTabDisplay: this.getDayTabDisplayData(today),
-            forecastContent: this.getForecastContent(0, currentHour, 24)
-        }
 
-        nextWeekData[0] = todayData;
-
-        for (let i = 1; i < 7; i++) {
+        for (let i = 0; i < 7; i++) {
             const day = this.getDay(i)
             nextWeekData[i] = {
                 linkDisplay: this.getLinkDisplayData(day),
                 dayTabDisplay: this.getDayTabDisplayData(day),
-                forecastContent: this.getForecastContent(i, 0, 24)
+                forecastContent: this.getForecastContent(i, i === 0 ? currentHour: 0, 24)
             }
         }
         return nextWeekData;
