@@ -6,7 +6,7 @@ class AppView {
         this.container = document.querySelector('.container')
     }
 
-    createSearchBar() {
-
+    createForm() {
+        const form = document.createElement('form');
     }
 }
