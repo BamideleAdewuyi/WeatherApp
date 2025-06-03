@@ -99,7 +99,7 @@ class AppController {
     getDayTabDisplayData(day) {
         return {
             date: this.getDate(day),
-            icon: this.getDate(day),
+            icon: this.getIcon(day),
             maxTemp: this.getMaxTemp(day),
             minTemp: this.getMinTemp(day),
             sunrise: this.getSunrise(day),
@@ -123,7 +123,7 @@ class AppController {
         }
         return content;
     };
-    
+
     getNextWeekData() {
         const nextWeekData = {}
         const today = this.getDay(0);
