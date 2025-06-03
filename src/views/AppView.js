@@ -18,6 +18,10 @@ class AppView {
         form.append(searchBarLabel, searchBar)
         this.container.append(form)
     }
+
+    render() {
+        
+    }
 }
 
 export default AppView;
