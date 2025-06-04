@@ -35,7 +35,8 @@ class AppView {
     }
 
     initialise() {
-
+        const form = this.createForm();
+        this.render([form]);
     }
 }
 
