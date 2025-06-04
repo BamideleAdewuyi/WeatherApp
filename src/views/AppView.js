@@ -20,10 +20,14 @@ class AppView {
     }
 
     addListeners() {
-        
+
     }
 
     render() {
+        
+    }
+
+    initialise() {
         
     }
 }
