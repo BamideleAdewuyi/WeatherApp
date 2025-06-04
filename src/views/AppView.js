@@ -5,6 +5,7 @@ class AppView {
         this.appController = new AppController;
         this.container = document.querySelector('.container');
         this.nextWeekData = {}
+        this.initialise()
     }
 
     clearContainer() {
@@ -25,7 +26,12 @@ class AppView {
     }
 
     addListeners() {
+        const form = document.querySelector('form');
 
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log("Ok")
+        })
     }
 
     render(elements) {
@@ -37,6 +43,7 @@ class AppView {
     initialise() {
         const form = this.createForm();
         this.render([form]);
+        this.addListeners()
     }
 }
 
