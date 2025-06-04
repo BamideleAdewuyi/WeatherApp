@@ -29,7 +29,9 @@ class AppView {
     }
 
     render(elements) {
-        
+        for (const element of elements) {
+            this.container.append(element);
+        }
     }
 
     initialise() {
