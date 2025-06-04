@@ -33,6 +33,10 @@ class AppView {
             e.preventDefault();
             const locationData = await this.appController.getLocationData(searchBar.value)
             console.log(locationData)
+            this.appController.setLocation(locationData);
+            console.log(this.appController.location)
+            const nextWeekData = this.appController.getNextWeekData()
+            console.log(nextWeekData);
         })
     }
 
