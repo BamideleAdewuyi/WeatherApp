@@ -27,10 +27,12 @@ class AppView {
 
     addListeners() {
         const form = document.querySelector('form');
+        const searchBar = document.querySelector('input');
 
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            console.log("Ok")
+            const locationData = await this.appController.getLocationData(searchBar.value)
+            console.log(locationData)
         })
     }
 
