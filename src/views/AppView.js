@@ -28,7 +28,7 @@ class AppView {
 
     }
 
-    render() {
+    render(elements) {
         
     }
 
