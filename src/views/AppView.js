@@ -6,6 +6,10 @@ class AppView {
         this.container = document.querySelector('.container')
     }
 
+    clearContainer() {
+        this.container.innerHTML = ''
+    }
+
     createForm() {
         const form = document.createElement('form');
         const searchBarLabel = document.createElement('label');
@@ -28,7 +32,7 @@ class AppView {
     }
 
     initialise() {
-        
+
     }
 }
 
