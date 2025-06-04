@@ -16,7 +16,7 @@ class AppView {
         searchBarLabel.setAttribute('for', 'searchBar');
         searchBarLabel.textContent = 'Search';
         form.append(searchBarLabel, searchBar)
-        this.container.append(form)
+        return form;
     }
 
     render() {
