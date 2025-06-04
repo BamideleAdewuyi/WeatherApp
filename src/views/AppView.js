@@ -19,6 +19,10 @@ class AppView {
         return form;
     }
 
+    addListeners() {
+        
+    }
+
     render() {
         
     }
