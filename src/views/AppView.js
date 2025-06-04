@@ -43,12 +43,12 @@ class AppView {
         for (const element of elements) {
             this.container.append(element);
         }
+        this.addListeners()
     }
 
     initialise() {
         const form = this.createForm();
         this.render([form]);
-        this.addListeners()
     }
 }
 
