@@ -139,3 +139,5 @@ class AppModel {
         return nextWeekData;
     }
 }
+
+export default AppModel;
