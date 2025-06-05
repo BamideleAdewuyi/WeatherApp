@@ -1,6 +1,6 @@
 class AppView {
     constructor() {
-        this.container = document.querySelector('.container');
+        this.container = this.getElement('.container');
     }
 
     getElement(selector) {
