@@ -37,12 +37,14 @@ class AppView {
         return element;
     }
 
-    displayDayTabs(nextWeekData) {
+    displayLinks(nextWeekData) {
         while (this.dayTabs.firstChild) {
             this.dayTabs.removeChild(this.dayTabs.firstChild)
         }
 
-        
+        nextWeekData.forEach(day => {
+            const li = this.createElement('li');
+        })
 
     };
 
