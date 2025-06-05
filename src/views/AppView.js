@@ -37,11 +37,12 @@ class AppView {
         return element;
     }
 
-    displayDayTabs(dayTabsData) {
+    displayDayTabs(nextWeekData) {
         while (this.dayTabs.firstChild) {
             this.dayTabs.removeChild(this.dayTabs.firstChild)
         }
 
+        
 
     };
 
