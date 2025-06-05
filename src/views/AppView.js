@@ -37,35 +37,6 @@ class AppView {
         return element;
     }
 
-    clearContainer() {
-        this.container.innerHTML = ''
-    };
-
-    addListeners() {
-        const form = document.querySelector('form');
-        const searchBar = document.querySelector('input');
-
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const locationData = await this.appController.getLocationData(searchBar.value)
-            this.appController.setLocation(locationData);
-            const nextWeekData = this.appController.getNextWeekData()
-            console.log(nextWeekData);
-        })
-    }
-
-    render(elements) {
-        this.clearContainer();
-        for (const element of elements) {
-            this.container.append(element);
-        }
-        this.addListeners()
-    }
-
-    initialise() {
-        const form = this.createForm();
-        this.render([form]);
-    }
 }
 
 export default AppView;
