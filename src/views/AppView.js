@@ -7,6 +7,14 @@ class AppView {
         return document.querySelector(selector);
     }
 
+    createElement(tag, className) {
+        const element = document.createElement(tag);
+        
+        if (className) element.classList.add(className);
+
+        return element;
+    }
+
     clearContainer() {
         this.container.innerHTML = ''
     }
