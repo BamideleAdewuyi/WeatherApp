@@ -1,6 +1,7 @@
 class AppView {
     constructor() {
         this.container = this.getElement('.container');
+
         // Search section
         this.searchSection = this.createElement('section', 'locationSearch')
         this.form = this.createElement('form');
@@ -8,9 +9,15 @@ class AppView {
         this.input.type = 'text';
         this.input.placeholder = 'Search location';
         this.form.append(this.input);
-        this.searchSection.append(this.form)
+        this.searchSection.append(this.form);
+
+        // Day tabs
+        this.dayTabsContainer = this.createElement('section', 'dayTabsContainer');
+        this.dayTabs = this.createElement('ul', 'dayTabs');
+        this.dayTabsContainer.append(this.dayTabs);
+
         
-        this.container.append(this.searchSection)
+        this.container.append(this.searchSection, this.dayTabsContainer)
     }
 
     getElement(selector) {
