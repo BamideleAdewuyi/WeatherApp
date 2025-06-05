@@ -3,6 +3,10 @@ class AppView {
         this.container = document.querySelector('.container');
     }
 
+    getElement(selector) {
+        return document.querySelector(selector);
+    }
+
     clearContainer() {
         this.container.innerHTML = ''
     }
