@@ -16,8 +16,13 @@ class AppView {
         this.dayTabs = this.createElement('ul', 'dayTabs');
         this.dayTabsContainer.append(this.dayTabs);
 
-        
-        this.container.append(this.searchSection, this.dayTabsContainer)
+        // Viewport Container
+        this.viewportContainer = this.createElement('div', 'viewportContainer');
+        this.forecastContent = this.createElement('div', 'forecastContent');
+        this.viewportContainer.append(this.forecastContent);
+
+
+        this.container.append(this.searchSection, this.dayTabsContainer, this.viewportContainer)
     }
 
     getElement(selector) {
