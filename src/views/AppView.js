@@ -37,6 +37,10 @@ class AppView {
         return element;
     }
 
+    displayDayTabs(dayTabs) {
+
+    };
+
 }
 
 export default AppView;
