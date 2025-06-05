@@ -38,7 +38,10 @@ class AppView {
     }
 
     displayDayTabs(dayTabs) {
-
+        while (this.dayTabs.firstChild) {
+            this.dayTabs.removeChild(this.dayTabs.firstChild)
+        }
+        
     };
 
 }
