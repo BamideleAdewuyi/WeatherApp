@@ -1,6 +1,12 @@
 class AppView {
     constructor() {
         this.container = this.getElement('.container');
+        this.form = this.createElement('form');
+        this.input = this.createElement('input')
+        this.input.type = 'text';
+        this.input.placeholder = 'Search location';
+        this.form.append(this.input);
+        this.container.append(this.form)
     }
 
     getElement(selector) {
@@ -17,20 +23,7 @@ class AppView {
 
     clearContainer() {
         this.container.innerHTML = ''
-    }
-
-    createForm() {
-        const form = document.createElement('form');
-        const searchBarLabel = document.createElement('label');
-        const searchBar = document.createElement('input');
-        searchBar.id = 'searchBar'
-        searchBar.setAttribute('type', 'text');
-        searchBar.setAttribute('placeholder', 'Enter location');
-        searchBarLabel.setAttribute('for', 'searchBar');
-        searchBarLabel.textContent = 'Search';
-        form.append(searchBarLabel, searchBar)
-        return form;
-    }
+    };
 
     addListeners() {
         const form = document.querySelector('form');
