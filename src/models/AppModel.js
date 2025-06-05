@@ -125,7 +125,7 @@ class AppModel {
     };
 
     getNextWeekData() {
-        const nextWeekData = {}
+        const nextWeekData = []
         const currentHour = this.getCurrentHour()
 
         for (let i = 0; i < 7; i++) {
