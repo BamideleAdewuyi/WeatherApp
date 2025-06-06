@@ -46,18 +46,22 @@ class AppView {
             const li = this.createElement('li', 'displayLink');
             li.id = `displayLink${nextWeekData.indexOf(day)}`
 
+            const tabDay = this.createElement('h3', 'tabDay');
             const date = this.createElement('time');
             date.textContent = li.id === 'displayLink0' ? 'Today' : day.linkDisplay.date;
-
+            tabDay.append(date);
             // NEED TO ADD ICONS
 
+            const linkWeatherDay = this.createElement('div', 'linkWeatherDay');
             const maxTemp = this.createElement('span');
             maxTemp.textContent = day.linkDisplay.maxTemp + '°';
 
             const minTemp = this.createElement('span');
             minTemp.textContent = day.linkDisplay.minTemp + '°';
 
-            li.append(date, maxTemp, minTemp);
+            linkWeatherDay.append(maxTemp, minTemp);
+
+            li.append(tabDay, linkWeatherDay);
 
             this.dayTabs.append(li)
         })
