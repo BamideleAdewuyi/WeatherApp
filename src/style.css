@@ -11,6 +11,7 @@ ul {
 .locationSearch {
     display: flex;
     justify-content: center;
+    padding: 1em;
 }
 
 .dayTabs {
