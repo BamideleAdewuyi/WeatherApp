@@ -43,7 +43,7 @@ class AppView {
         }
 
         nextWeekData.forEach(day => {
-            const li = this.createElement('li');
+            const li = this.createElement('li', 'displayLink');
             li.id = `displayLink${nextWeekData.indexOf(day)}`
 
             const date = this.createElement('time');
