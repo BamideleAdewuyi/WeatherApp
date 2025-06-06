@@ -62,6 +62,10 @@ class AppView {
 
     };
 
+    displayDayTab(nextWeekData) {
+        
+    }
+
 }
 
 export default AppView;
