@@ -104,6 +104,10 @@ class AppView {
 
     }
 
+    displayForecastContent(nextWeekData, day) {
+        
+    }
+
 }
 
 export default AppView;
