@@ -47,7 +47,9 @@ class AppView {
             li.id = `displayLink${nextWeekData.indexOf(day)}`
 
             const date = this.createElement('time');
-            date.textContent = li.id === 'displayLink0' ? 'Today' : day.linkDisplay.date
+            date.textContent = li.id === 'displayLink0' ? 'Today' : day.linkDisplay.date;
+
+            // NEED TO ADD ICONS
 
             const maxTemp = this.createElement('span');
             maxTemp.textContent = day.linkDisplay.maxTemp;
@@ -63,7 +65,30 @@ class AppView {
     };
 
     displayDayTab(nextWeekData, day) {
-        
+        const li = this.createElement('li');
+        li.id = `dayTab${day}`;
+
+        const date = this.createElement('time');
+        date.textContent = day === 0? 'Today' : nextWeekData[day].dayTabDisplay.date;
+
+        const maxTemp = this.createElement('span');
+        maxTemp.textContent = nextWeekData[day].dayTabDisplay.maxTemp;
+
+        const minTemp = this.createElement('span');
+        minTemp.textContent = nextWeekData[day].dayTabDisplay.minTemp;
+
+        const sunrise = this.createElement('span');
+        sunrise.textContent = `Sunrise: ${nextWeekData[day].dayTabDisplay.sunrise}`;
+
+        const sunset = this.createElement('span');
+        sunset.textContent = `Sunset: ${nextWeekData[day].dayTabDisplay.sunset}`;
+
+        li.append(date, maxTemp, minTemp, sunrise, sunset);
+
+        const displayLink = this.getElement(`#displayLink${day}`);
+
+        displayLink.replaceWith(li);
+
     }
 
 }
