@@ -6,3 +6,8 @@
 ul {
     list-style-type: none;
 }
+
+.locationSearch {
+    display: flex;
+    justify-content: center;
+}
