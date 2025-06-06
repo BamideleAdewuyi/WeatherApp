@@ -30,5 +30,6 @@ ul {
 .dayTab {
     display: flex;
     flex-direction: column;
+    outline: 2px solid black;
     width: 20em;
 }
