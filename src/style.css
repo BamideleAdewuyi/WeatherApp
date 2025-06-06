@@ -21,5 +21,6 @@ ul {
 
 .displayLink {
     outline: 1px solid black;
-    padding: 1.5em;
+    padding: 1em;
+    width: 9%;
 }
