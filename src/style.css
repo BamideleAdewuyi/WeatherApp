@@ -26,3 +26,8 @@ ul {
     display: flex;
     flex-direction: column;
 }
+
+.dayTab {
+    display: flex;
+    flex-direction: column;
+}
