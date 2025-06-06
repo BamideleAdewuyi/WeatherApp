@@ -74,8 +74,12 @@ class AppView {
         const li = this.createElement('li', 'dayTab');
         li.id = `dayTab${day}`;
 
+        const dateArea = this.createElement('h3', 'dateArea')
         const date = this.createElement('time');
         date.textContent = day === 0? 'Today' : nextWeekData[day].dayTabDisplay.date;
+        dateArea.append(date)
+
+        const conditionsArea = this.createElement('div', 'conditionsArea')
 
         const maxTemp = this.createElement('span', 'temp');
         maxTemp.classList.add('dayTabMaxTemp')
@@ -91,7 +95,8 @@ class AppView {
         const sunset = this.createElement('span');
         sunset.textContent = `Sunset: ${nextWeekData[day].dayTabDisplay.sunset}`;
 
-        li.append(date, maxTemp, minTemp, sunrise, sunset);
+        conditionsArea.append(maxTemp, minTemp, sunrise, sunset)
+        li.append(dateArea, conditionsArea);
 
         const displayLink = this.getElement(`#displayLink${day}`);
 
