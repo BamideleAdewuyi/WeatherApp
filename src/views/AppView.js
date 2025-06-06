@@ -54,9 +54,11 @@ class AppView {
 
             const linkWeatherDay = this.createElement('div', 'linkWeatherDay');
             const maxTemp = this.createElement('span', 'temp');
+            maxTemp.classList.add('linkMaxTemp')
             maxTemp.textContent = day.linkDisplay.maxTemp + '°';
 
             const minTemp = this.createElement('span', 'temp');
+            minTemp.classList.add('linkMinTemp')
             minTemp.textContent = day.linkDisplay.minTemp + '°';
 
             linkWeatherDay.append(maxTemp, minTemp);
@@ -76,9 +78,11 @@ class AppView {
         date.textContent = day === 0? 'Today' : nextWeekData[day].dayTabDisplay.date;
 
         const maxTemp = this.createElement('span', 'temp');
+        maxTemp.classList.add('dayTabMaxTemp')
         maxTemp.textContent = nextWeekData[day].dayTabDisplay.maxTemp + '°';
 
         const minTemp = this.createElement('span', 'temp');
+        minTemp.classList.add('dayTabMinTemp')
         minTemp.textContent = nextWeekData[day].dayTabDisplay.minTemp + '°';
 
         const sunrise = this.createElement('span');
