@@ -109,7 +109,7 @@ class AppModel {
 
     getForecastContent(day, start, end) {
         const date = this.getDate(this.getDay(day));
-        const content = {}
+        const content = []
         for (let i = start; i < end; i++) {
             const hour = this.getHour(this.getDay(day), i)
             content[i] = {
