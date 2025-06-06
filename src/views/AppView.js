@@ -104,8 +104,14 @@ class AppView {
 
     }
 
-    displayForecastContent(nextWeekData, day) {
-        
+    displayForecastContent(day) {
+        const hoursContainer = this.createElement('div', 'hoursContainer');
+        day.forecastContent.forEach(hour => {
+            const div = this.createElement('div', 'hour');
+            div.textContent = `${day.forecastContent.indexOf(hour)}:00`;
+            hoursContainer.append(div)
+        })
+        this.forecastContent.append(hoursContainer);
     }
 
 }
