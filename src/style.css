@@ -35,3 +35,8 @@ ul {
     outline: 2px solid black;
     width: 20em;
 }
+
+.hoursContainer {
+    outline: 1px solid black;
+    display: flex;
+}
