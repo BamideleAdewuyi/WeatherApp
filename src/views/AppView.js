@@ -71,7 +71,7 @@ class AppView {
     };
 
     displayDayTab(nextWeekData, day) {
-        const li = this.createElement('li');
+        const li = this.createElement('li', 'dayTab');
         li.id = `dayTab${day}`;
 
         const date = this.createElement('time');
