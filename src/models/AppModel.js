@@ -89,7 +89,7 @@ class AppModel {
 
     getLinkDisplayData(day) {
         return {
-            date: this.getDate(day),
+            date: new Date(this.getDate(day)).toLocaleDateString('en-gb', {weekday: 'short', day: 'numeric', month: 'short'}).split(',').join(''),
             icon: this.getIcon(day),
             maxTemp: this.getMaxTemp(day),
             minTemp: this.getMinTemp(day)
@@ -98,7 +98,7 @@ class AppModel {
 
     getDayTabDisplayData(day) {
         return {
-            date: this.getDate(day),
+            date: new Date(this.getDate(day)).toLocaleDateString('en-gb', {weekday: 'short', day: 'numeric', month: 'short'}).split(',').join(''),
             icon: this.getIcon(day),
             maxTemp: this.getMaxTemp(day),
             minTemp: this.getMinTemp(day),
