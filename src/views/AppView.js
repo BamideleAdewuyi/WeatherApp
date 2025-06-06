@@ -47,7 +47,7 @@ class AppView {
             li.id = `displayLink${nextWeekData.indexOf(day)}`
 
             const date = this.createElement('time');
-            date.textContent = day.linkDisplay.date;
+            date.textContent = li.id === 'displayLink0' ? 'Today' : day.linkDisplay.date
 
             const maxTemp = this.createElement('span');
             maxTemp.textContent = day.linkDisplay.maxTemp;
