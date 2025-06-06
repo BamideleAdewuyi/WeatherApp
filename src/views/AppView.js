@@ -53,10 +53,10 @@ class AppView {
             // NEED TO ADD ICONS
 
             const linkWeatherDay = this.createElement('div', 'linkWeatherDay');
-            const maxTemp = this.createElement('span');
+            const maxTemp = this.createElement('span', 'temp');
             maxTemp.textContent = day.linkDisplay.maxTemp + '°';
 
-            const minTemp = this.createElement('span');
+            const minTemp = this.createElement('span', 'temp');
             minTemp.textContent = day.linkDisplay.minTemp + '°';
 
             linkWeatherDay.append(maxTemp, minTemp);
@@ -75,10 +75,10 @@ class AppView {
         const date = this.createElement('time');
         date.textContent = day === 0? 'Today' : nextWeekData[day].dayTabDisplay.date;
 
-        const maxTemp = this.createElement('span');
+        const maxTemp = this.createElement('span', 'temp');
         maxTemp.textContent = nextWeekData[day].dayTabDisplay.maxTemp + '°';
 
-        const minTemp = this.createElement('span');
+        const minTemp = this.createElement('span', 'temp');
         minTemp.textContent = nextWeekData[day].dayTabDisplay.minTemp + '°';
 
         const sunrise = this.createElement('span');
