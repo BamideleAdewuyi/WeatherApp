@@ -22,7 +22,7 @@ ul {
 .displayLink {
     outline: 1px solid black;
     padding: 1em;
-    width: 9%;
+    width: 6em;
     display: flex;
     flex-direction: column;
 }
@@ -30,4 +30,5 @@ ul {
 .dayTab {
     display: flex;
     flex-direction: column;
+    width: 20em;
 }
