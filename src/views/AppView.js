@@ -62,7 +62,7 @@ class AppView {
 
     };
 
-    displayDayTab(nextWeekData) {
+    displayDayTab(nextWeekData, day) {
         
     }
 
