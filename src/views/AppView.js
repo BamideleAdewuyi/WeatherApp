@@ -124,7 +124,7 @@ class AppView {
             humidity.textContent = `Humidity ${hour.humidity}%`;
 
             const precipitation = this.createElement('div', 'precipitation');
-            precipitation.textContent = `Precipitation ${hour.precipitation}%`
+            precipitation.textContent = `Precipitation ${hour.precipProb}%`
 
             detailedConditions.append(temp, feelsLikeTemp, humidity, precipitation);
 
