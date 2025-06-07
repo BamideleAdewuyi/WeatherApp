@@ -164,6 +164,10 @@ class AppView {
         this.forecastContent.append(hoursContainer, detailedConditionsContainer);
     }
 
+    bindSearchLocation(handler) {
+        
+    }
+
 }
 
 export default AppView;
