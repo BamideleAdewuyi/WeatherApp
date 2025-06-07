@@ -140,19 +140,19 @@ class AppView {
             const detailedConditions = this.createElement('div', 'detailedConditions')
 
             const temp = this.createElement('div', 'temp');
-            temp.textContent = `Temperature ${hour.temp}°`
+            temp.textContent = `${hour.temp}°`
             tempByHour.append(temp);
 
             const feelsLikeTemp = this.createElement('div', 'temp')
-            feelsLikeTemp.textContent = `Feels like ${hour.feelsLikeTemp}°`;
+            feelsLikeTemp.textContent = `${hour.feelsLikeTemp}°`;
             feelsLikeTempByHour.append(feelsLikeTemp)
 
             const humidity = this.createElement('div', 'humidity');
-            humidity.textContent = `Humidity ${hour.humidity}%`;
+            humidity.textContent = `${hour.humidity}%`;
             humidityByHour.append(humidity);
 
             const precipitation = this.createElement('div', 'precipitation');
-            precipitation.textContent = `Precipitation ${hour.precipProb}%`;
+            precipitation.textContent = `${hour.precipProb}%`;
             precipByHour.append(precipitation)
 
             // detailedConditions.append(temp, feelsLikeTemp, humidity, precipitation);
