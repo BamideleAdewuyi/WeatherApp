@@ -70,6 +70,7 @@ ul {
 
 .detailedConditionsContainer {
     display: flex;
+    height: 40em;
 }
 
 .detailedConditions, .hour {
@@ -82,6 +83,9 @@ ul {
     outline: 1px solid black;
     width: 3em;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .hour {
