@@ -12,7 +12,7 @@ class AppModel {
                 throw new Error(response.status)
             }
             const data = await response.json();
-            return data;
+            this.setLocation(data)
         } catch(err) {
             console.log("Something went wrong: " + err)
             return err;
