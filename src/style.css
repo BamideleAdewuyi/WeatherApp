@@ -36,6 +36,11 @@ ul {
     width: 20em;
 }
 
+.viewportContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .hoursContainer {
     outline: 1px solid black;
     display: flex;
