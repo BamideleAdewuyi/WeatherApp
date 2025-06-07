@@ -20,23 +20,26 @@ ul {
 }
 
 .dayTabsContainer {
-    display: inline-flex;
+    display: flex;
     width: 100%;
 }
 
+.dayTabs, .viewportContainer {
+    box-sizing: border-box;
+    width: 70em;
+}
+
 .viewportContainer {
-    display: in;
+    display: flex;
     flex-direction: row;
     justify-content: left;
     margin-left: 15%;
-    width: 100%;
 }
 
 .dayTabs {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    width: 80%;
     outline: 2px solid black;
     margin-left: 15%;
     overflow-y: scroll;
