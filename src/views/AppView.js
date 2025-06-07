@@ -11,6 +11,9 @@ class AppView {
         this.form.append(this.input);
         this.searchSection.append(this.form);
 
+        // Main area
+        this.mainArea = this.createElement('div', 'mainArea');
+
         // Day tabs
         this.dayTabsContainer = this.createElement('section', 'dayTabsContainer');
         this.dayTabs = this.createElement('ul', 'dayTabs');
@@ -21,8 +24,8 @@ class AppView {
         this.forecastContent = this.createElement('div', 'forecastContent');
         this.viewportContainer.append(this.forecastContent);
 
-
-        this.container.append(this.searchSection, this.dayTabsContainer, this.viewportContainer)
+        this.mainArea.append(this.dayTabsContainer, this.viewportContainer)
+        this.container.append(this.searchSection, this.mainArea)
     }
 
     getElement(selector) {
