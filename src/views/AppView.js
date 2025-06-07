@@ -137,13 +137,13 @@ class AppView {
             hourDiv.textContent = `${day.forecastContent.indexOf(hour)}:00`;
             hoursContainer.append(hourDiv)
 
-            const detailedConditions = this.createElement('div', 'detailedConditions')
-
             const temp = this.createElement('div', 'temp');
+            temp.classList.add('detailedTemp')
             temp.textContent = `${hour.temp}°`
             tempByHour.append(temp);
 
             const feelsLikeTemp = this.createElement('div', 'temp')
+            feelsLikeTemp.classList.add('detailedFeelsLike')
             feelsLikeTemp.textContent = `${hour.feelsLikeTemp}°`;
             feelsLikeTempByHour.append(feelsLikeTemp)
 
@@ -155,9 +155,6 @@ class AppView {
             precipitation.textContent = `${hour.precipProb}%`;
             precipByHour.append(precipitation)
 
-            // detailedConditions.append(temp, feelsLikeTemp, humidity, precipitation);
-
-            // detailedConditionsContainer.append(detailedConditions)
         })
         detailedConditionsContainer.append(tempContainer, feelsLikeTempContainer, humidityContainer, precipContainer)
         this.forecastContent.append(hoursContainer, detailedConditionsContainer);
