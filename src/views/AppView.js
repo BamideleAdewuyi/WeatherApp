@@ -106,11 +106,28 @@ class AppView {
 
     displayForecastContent(day) {
         const hoursContainer = this.createElement('div', 'hoursContainer');
-        const detailedConditionsContainer = this.createElement('div', 'detailedConditionsContainer')
+        const detailedConditionsContainer = this.createElement('div', 'detailedConditionsContainer');
+
         const tempContainer = this.createElement('div', 'tempContainer');
+        const tempHeader = this.createElement('h4', 'tempHeader');
+        tempHeader.textContent = "Temperature";
+        tempContainer.append(tempHeader)
+
         const feelsLikeTempContainer = this.createElement('div', 'feelsLikeTempContainer');
+        const feelsLikeTempHeader = this.createElement('h4', 'feelsLikeTempHeader');
+        feelsLikeTempHeader.textContent = 'Feels like';
+        feelsLikeTempContainer.append(feelsLikeTempHeader)
+
         const humidityContainer = this.createElement('div', 'humidityContainer');
+        const humidityHeader = this.createElement('h4', 'humidityHeader');
+        humidityHeader.textContent = 'Humidity'
+        humidityContainer.append(humidityHeader);
+
         const precipContainer = this.createElement('div', 'precipContainer')
+        const precipHeader = this.createElement('h4', 'precipHeader')
+        precipHeader.textContent = 'Chance of precipitation'
+        precipContainer.append(precipHeader)
+
         day.forecastContent.forEach(hour => {
             const hourDiv = this.createElement('div', 'hour');
             hourDiv.textContent = `${day.forecastContent.indexOf(hour)}:00`;
@@ -128,7 +145,7 @@ class AppView {
             humidity.textContent = `Humidity ${hour.humidity}%`;
 
             const precipitation = this.createElement('div', 'precipitation');
-            precipitation.textContent = `Precipitation ${hour.precipProb}%`
+            precipitation.textContent = `Precipitation ${hour.precipProb}%`;
 
             detailedConditions.append(temp, feelsLikeTemp, humidity, precipitation);
 
