@@ -68,6 +68,22 @@ ul {
     display: flex;
 }
 
+.detailedConditionsContainer {
+    display: flex;
+}
+
+.detailedConditions, .hour {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.detailedConditions {
+    outline: 1px solid black;
+    width: 3em;
+    padding: 1em;
+}
+
 .hour {
     outline: 1px solid black;
     width: 3em;
