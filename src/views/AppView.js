@@ -110,23 +110,27 @@ class AppView {
 
         const tempContainer = this.createElement('div', 'tempContainer');
         const tempHeader = this.createElement('h4', 'tempHeader');
+        const tempByHour = this.createElement('div', 'tempByHour')
         tempHeader.textContent = "Temperature";
-        tempContainer.append(tempHeader)
+        tempContainer.append(tempHeader, tempByHour)
 
         const feelsLikeTempContainer = this.createElement('div', 'feelsLikeTempContainer');
         const feelsLikeTempHeader = this.createElement('h4', 'feelsLikeTempHeader');
+        const feelsLikeTempByHour = this.createElement('div', 'feelsLikeTempByHour')
         feelsLikeTempHeader.textContent = 'Feels like';
-        feelsLikeTempContainer.append(feelsLikeTempHeader)
+        feelsLikeTempContainer.append(feelsLikeTempHeader, feelsLikeTempByHour)
 
         const humidityContainer = this.createElement('div', 'humidityContainer');
         const humidityHeader = this.createElement('h4', 'humidityHeader');
+        const humidityByHour = this.createElement('div', 'humidityByHour')
         humidityHeader.textContent = 'Humidity'
-        humidityContainer.append(humidityHeader);
+        humidityContainer.append(humidityHeader, humidityByHour);
 
-        const precipContainer = this.createElement('div', 'precipContainer')
-        const precipHeader = this.createElement('h4', 'precipHeader')
+        const precipContainer = this.createElement('div', 'precipContainer');
+        const precipHeader = this.createElement('h4', 'precipHeader');
+        const precipByHour = this.createElement('div', 'precipByHour');
         precipHeader.textContent = 'Chance of precipitation'
-        precipContainer.append(precipHeader)
+        precipContainer.append(precipHeader, precipByHour)
 
         day.forecastContent.forEach(hour => {
             const hourDiv = this.createElement('div', 'hour');
