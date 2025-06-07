@@ -106,12 +106,20 @@ class AppView {
 
     displayForecastContent(day) {
         const hoursContainer = this.createElement('div', 'hoursContainer');
+        const detailedConditionsContainer = this.createElement('div', 'detailedConditionsContainer')
         day.forecastContent.forEach(hour => {
-            const div = this.createElement('div', 'hour');
-            div.textContent = `${day.forecastContent.indexOf(hour)}:00`;
-            hoursContainer.append(div)
+            const hourDiv = this.createElement('div', 'hour');
+            hourDiv.textContent = `${day.forecastContent.indexOf(hour)}:00`;
+            hoursContainer.append(hourDiv)
+
+            const detailedConditions = this.createElement('div', 'detailedConditions')
+            const feelsLikeTemp = this.createElement('div', 'temp')
+            feelsLikeTemp.textContent = `${hour.feelsLikeTemp}°`;
+            detailedConditions.append(feelsLikeTemp);
+
+            detailedConditionsContainer.append(detailedConditions)
         })
-        this.forecastContent.append(hoursContainer);
+        this.forecastContent.append(hoursContainer, detailedConditionsContainer);
     }
 
 }
