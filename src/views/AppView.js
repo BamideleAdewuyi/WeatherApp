@@ -165,7 +165,9 @@ class AppView {
     }
 
     bindSearchLocation(handler) {
-        
+        this.form.addEventListener('submit', e => {
+            e.preventDefault();
+        })
     }
 
 }
