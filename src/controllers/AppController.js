@@ -3,6 +3,10 @@ class AppController {
         this.model = model;
         this.view = view;
     }
+
+    handleSearchLocation(location) {
+        this.model
+    }
 }
 
 export default AppController;
