@@ -39,6 +39,7 @@ ul {
     width: 80%;
     outline: 2px solid black;
     margin-left: 15%;
+    overflow-y: scroll;
 }
 
 .forecastContent {
