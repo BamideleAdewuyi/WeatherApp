@@ -4,7 +4,6 @@ class AppModel {
     }
 
     async getLocationData(location) {
-        this.location = {}
         const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=5VAXRJV6HJN8XMXDJR8W98TRW`;
 
         try {
@@ -21,6 +20,7 @@ class AppModel {
     }
 
     setLocation(json) {
+        this.location = {}
         this.location = json;
     }
 
