@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    outline: 2px solid red;
 }
 
 .container {
@@ -20,17 +19,38 @@ ul {
     padding: 1em;
 }
 
+.dayTabsContainer {
+    display: inline-flex;
+    width: 100%;
+}
+
+.viewportContainer {
+    display: in;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 15%;
+    width: 100%;
+}
+
 .dayTabs {
     display: flex;
     flex-direction: row;
     justify-content: left;
+    width: 80%;
+    outline: 2px solid black;
     margin-left: 15%;
+}
+
+.forecastContent {
+    width: 80%;
+    outline: 2px solid black;
+    overflow-y: scroll;
 }
 
 .displayLink {
     outline: 1px solid black;
     padding: 1em;
-    width: 6em;
+    width: 11%;
     display: flex;
     flex-direction: column;
 }
@@ -41,14 +61,6 @@ ul {
     padding: 1em;
     outline: 2px solid black;
     width: 20em;
-}
-
-.viewportContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    overflow-y: scroll;
-    margin-left: 15%;
 }
 
 .hoursContainer {
