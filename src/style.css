@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* outline: 2px solid red; */
 }
 
 ul {
@@ -42,7 +41,13 @@ ul {
 }
 
 .hoursContainer {
-    outline: 1px solid black;
     display: flex;
     justify-content: center;
+    width: 80%;
+}
+
+.hour {
+    outline: 1px solid black;
+    width: 3em;
+    padding: 1em;
 }
