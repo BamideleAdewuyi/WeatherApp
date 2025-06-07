@@ -38,11 +38,13 @@ ul {
 .viewportContainer {
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
 }
 
 .hoursContainer {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 20.5%;
 }
 
 .hour {
