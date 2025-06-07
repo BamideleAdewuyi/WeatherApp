@@ -8,7 +8,10 @@ class AppView {
         this.input = this.createElement('input')
         this.input.type = 'text';
         this.input.placeholder = 'Search location';
-        this.form.append(this.input);
+        this.submitButton = this.createElement('button', 'submitButton');
+        this.submitButton.type = 'submit';
+        this.submitButton.textContent = "Go"
+        this.form.append(this.input, this.submitButton);
         this.searchSection.append(this.form);
 
         // Main area
