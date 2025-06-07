@@ -1,6 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    outline: 2px solid red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 ul {
@@ -16,7 +23,8 @@ ul {
 .dayTabs {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 15%;
 }
 
 .displayLink {
@@ -37,14 +45,14 @@ ul {
 
 .viewportContainer {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
     overflow-y: scroll;
+    margin-left: 15%;
 }
 
 .hoursContainer {
     display: flex;
-    justify-content: left;
-    margin-left: 20.5%;
 }
 
 .hour {
