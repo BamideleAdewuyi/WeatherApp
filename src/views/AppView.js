@@ -108,6 +108,7 @@ class AppView {
     }
 
     displayForecastContent(day) {
+        this.forecastContent.innerHTML = ''
         const hoursContainer = this.createElement('div', 'hoursContainer');
         const detailedConditionsContainer = this.createElement('div', 'detailedConditionsContainer');
 
