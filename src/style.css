@@ -74,7 +74,14 @@ ul {
     height: 40em;
 }
 
-.detailedConditions, .hour {
+.tempByHour, .feelsLikeTempByHour,
+.humidityByHour, .precipByHour {
+    display: flex;
+}
+
+.detailedConditions, .hour,
+.humidity, .precipitation,
+.detailedTemp, .detailedFeelsLike {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -89,7 +96,8 @@ ul {
     justify-content: space-evenly;
 }
 
-.hour {
+.hour, .humidity, .precipitation,
+.detailedTemp, .detailedFeelsLike {
     outline: 1px solid black;
     width: 3em;
     padding: 1em;
