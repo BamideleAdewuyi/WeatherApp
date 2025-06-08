@@ -174,6 +174,10 @@ class AppView {
         })
     }
 
+    bindSelectDay(handler) {
+        
+    }
+
 }
 
 export default AppView;
