@@ -43,6 +43,10 @@ class AppView {
         return element;
     }
 
+    importImage() {
+        
+    }
+
     displayLinks(nextWeekData) {
         while (this.dayTabs.firstChild) {
             this.dayTabs.removeChild(this.dayTabs.firstChild)
@@ -56,7 +60,6 @@ class AppView {
             const date = this.createElement('time');
             date.textContent = li.id === 'displayLink0' ? 'Today' : day.linkDisplay.date;
             tabDay.append(date);
-            // NEED TO ADD ICONS
 
             const linkWeatherDay = this.createElement('div', 'linkWeatherDay');
             const maxTemp = this.createElement('span', 'temp');
