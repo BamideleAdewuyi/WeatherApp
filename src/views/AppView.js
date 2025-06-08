@@ -82,7 +82,7 @@ class AppView {
 
         const dateArea = this.createElement('h3', 'dateArea')
         const date = this.createElement('time');
-        date.textContent = day === 0? 'Today' : nextWeekData[day].dayTabDisplay.date;
+        date.textContent = li.id === 'dayTab0'? 'Today' : nextWeekData[day].dayTabDisplay.date;
         dateArea.append(date)
 
         const conditionsArea = this.createElement('div', 'conditionsArea')
