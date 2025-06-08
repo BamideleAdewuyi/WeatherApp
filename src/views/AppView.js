@@ -43,8 +43,11 @@ class AppView {
         return element;
     }
 
-    importImage() {
-        
+    async getImage(iconName, container, iconClass) {
+        const iconSource = (await import(`./assets/${iconName}.png`)).default
+        const icon = this.createElement('img', iconClass)
+        icon.src = iconSource
+        container.append(icon);
     }
 
     displayLinks(nextWeekData) {
