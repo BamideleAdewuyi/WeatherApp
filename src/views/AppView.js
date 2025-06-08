@@ -174,8 +174,10 @@ class AppView {
         })
     }
 
-    bindSelectDay(handler) {
-        
+    bindSelectDay(handler, dayLink) {
+        dayLink.addEventListener('click', () => {
+            handler(dayLink);
+        })
     }
 
 }
