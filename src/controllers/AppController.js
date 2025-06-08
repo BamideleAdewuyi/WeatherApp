@@ -7,18 +7,21 @@ class AppController {
 
     handleSearchLocation = async (userInput) => {
         await this.model.getLocationData(userInput);
-        console.log(this.model.location)
         const nextWeekData = this.model.getNextWeekData()
         this.view.displayLinks(nextWeekData);
         this.view.displayDayTab(nextWeekData, 0);
         this.view.displayForecastContent(nextWeekData[0])
+        this.view.bindSelectDay(this.handleSelectDay)
     }
 
-    handleSelectDay = (displayLinkIndex) => {
+    handleSelectDay = (displayLink) => {
+        console.log(displayLink)
+        const index = displayLink.id.slice(-1);
         const nextWeekData = this.model.getNextWeekData();
         this.view.displayLinks(nextWeekData);
-        this.view.displayDayTab(nextWeekData, displayLinkIndex)
-        this.view.displayForecastContent(nextWeekData[displayLinkIndex])
+        this.view.displayDayTab(nextWeekData, index)
+        this.view.displayForecastContent(nextWeekData[index])
+        this.view.bindSelectDay(this.handleSelectDay)
     }
 }
 
