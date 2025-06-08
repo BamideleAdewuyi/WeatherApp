@@ -13,6 +13,10 @@ class AppController {
         this.view.displayDayTab(nextWeekData, 0);
         this.view.displayForecastContent(nextWeekData[0])
     }
+
+    handleSelectDay = (day) => {
+        
+    }
 }
 
 export default AppController;
