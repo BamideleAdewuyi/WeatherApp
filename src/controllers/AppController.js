@@ -15,7 +15,6 @@ class AppController {
     }
 
     handleSelectDay = (displayLink) => {
-        console.log(displayLink)
         const index = displayLink.id.slice(-1);
         const nextWeekData = this.model.getNextWeekData();
         this.view.displayLinks(nextWeekData);

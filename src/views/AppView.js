@@ -176,7 +176,6 @@ class AppView {
 
     bindSelectDay(handler) {
         const displayLinks = document.querySelectorAll('.displayLink');
-        console.log(displayLinks)
         displayLinks.forEach(link => {
             link.addEventListener('click', () => {
                 handler(link);
