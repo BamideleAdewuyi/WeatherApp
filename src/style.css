@@ -33,7 +33,7 @@ ul {
 .hoursContainer, .detailedConditionsContainer,
 .tempByHour, .feelsLikeTempByHour,
 .humidityByHour, .precipByHour,
-.conditionsArea {
+.conditionsArea, .iconsByHour {
     display: flex;
 }
 
