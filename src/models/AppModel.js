@@ -88,6 +88,10 @@ class AppModel {
         return hour.precipprob;
     }
 
+    convertTemp(temp) {
+        
+    }
+
     getLinkDisplayData(day) {
         return {
             date: new Date(this.getDate(day)).toLocaleDateString('en-gb', {weekday: 'short', day: 'numeric', month: 'short'}).split(',').join(''),
