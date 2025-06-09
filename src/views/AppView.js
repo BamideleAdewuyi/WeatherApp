@@ -43,12 +43,12 @@ class AppView {
         return element;
     }
 
-    async getImage(iconName, container, iconClass) {
-        const iconSource = (await import(`./assets/${iconName}.png`)).default
-        const icon = this.createElement('img', iconClass)
-        icon.src = iconSource
-        container.append(icon);
-    }
+    // async getImage(iconName, container, iconClass) {
+    //     const iconSource = (await import(`./assets/${iconName}.png`)).default
+    //     const icon = this.createElement('img', iconClass)
+    //     icon.src = iconSource
+    //     container.append(icon);
+    // }
 
     displayLinks(nextWeekData) {
         while (this.dayTabs.firstChild) {
