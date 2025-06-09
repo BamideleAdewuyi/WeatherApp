@@ -89,7 +89,7 @@ class AppModel {
     }
 
     convertTemp(temp) {
-        
+        return (Math.round(((temp - 32)/(9/5)) * 10))/10
     }
 
     getLinkDisplayData(day) {
