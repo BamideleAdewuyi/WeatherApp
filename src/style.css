@@ -55,3 +55,15 @@ ul {
     padding: 2em;
     justify-content: center;
 }
+
+.tempHeader, .feelsLikeTempHeader,
+.humidityHeader, .precipHeader {
+    position: fixed;
+}
+
+.tempHeaderContainer,
+.feelsLikeHeaderContainer,
+.humidityHeaderContainer,
+.precipHeaderContainer {
+    height: 20px;
+}
