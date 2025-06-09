@@ -1,3 +1,4 @@
+import { ImageMap } from "../assets/imageMap";
 class AppView {
     constructor() {
         this.container = this.getElement('.container');
