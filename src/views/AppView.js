@@ -126,10 +126,12 @@ class AppView {
         const detailedConditionsContainer = this.createElement('div', 'detailedConditionsContainer');
 
         const tempContainer = this.createElement('div', 'tempContainer');
+        const tempHeaderContainer = this.createElement('div', 'tempHeaderContainer');
         const tempHeader = this.createElement('h4', 'tempHeader');
         const tempByHour = this.createElement('div', 'tempByHour')
         tempHeader.textContent = "Temperature";
-        tempContainer.append(tempHeader, tempByHour)
+        tempHeaderContainer.append(tempHeader)
+        tempContainer.append(tempHeaderContainer, tempByHour)
 
         const feelsLikeTempContainer = this.createElement('div', 'feelsLikeTempContainer');
         const feelsLikeTempHeader = this.createElement('h4', 'feelsLikeTempHeader');
