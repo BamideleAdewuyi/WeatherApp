@@ -134,22 +134,28 @@ class AppView {
         tempContainer.append(tempHeaderContainer, tempByHour)
 
         const feelsLikeTempContainer = this.createElement('div', 'feelsLikeTempContainer');
+        const feelsLikeTempHeaderContainer = this.createElement('div', 'feelsLikeHeaderContainer')
         const feelsLikeTempHeader = this.createElement('h4', 'feelsLikeTempHeader');
         const feelsLikeTempByHour = this.createElement('div', 'feelsLikeTempByHour')
         feelsLikeTempHeader.textContent = 'Feels like';
-        feelsLikeTempContainer.append(feelsLikeTempHeader, feelsLikeTempByHour)
+        feelsLikeTempHeaderContainer.append(feelsLikeTempHeader)
+        feelsLikeTempContainer.append(feelsLikeTempHeaderContainer, feelsLikeTempByHour)
 
         const humidityContainer = this.createElement('div', 'humidityContainer');
+        const humidityHeaderContainer = this.createElement('div', 'humidityHeaderContainer')
         const humidityHeader = this.createElement('h4', 'humidityHeader');
         const humidityByHour = this.createElement('div', 'humidityByHour')
         humidityHeader.textContent = 'Humidity'
-        humidityContainer.append(humidityHeader, humidityByHour);
+        humidityHeaderContainer.append(humidityHeader)
+        humidityContainer.append(humidityHeaderContainer, humidityByHour);
 
         const precipContainer = this.createElement('div', 'precipContainer');
+        const precipHeaderContainer = this.createElement('div', 'precipHeaderContainer');
         const precipHeader = this.createElement('h4', 'precipHeader');
         const precipByHour = this.createElement('div', 'precipByHour');
         precipHeader.textContent = 'Chance of precipitation'
-        precipContainer.append(precipHeader, precipByHour)
+        precipHeaderContainer.append(precipHeader)
+        precipContainer.append(precipHeaderContainer, precipByHour)
 
         const iconContainer = this.createElement('div', 'iconContainer');
         const iconsByHour = this.createElement('div', 'iconsByHour');
