@@ -111,6 +111,7 @@ class AppView {
         sunset.textContent = `Sunset: ${nextWeekData[day].dayTabDisplay.sunset}`;
 
         conditionsArea.append(maxTemp, minTemp, sunrise, sunset)
+        this.getImage(nextWeekData[day].dayTabDisplay.icon, conditionsArea, 'dayTabIcon');
         li.append(dateArea, conditionsArea);
 
         const displayLink = this.getElement(`#displayLink${day}`);
