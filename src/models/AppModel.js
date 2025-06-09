@@ -88,8 +88,8 @@ class AppModel {
         return hour.precipprob;
     }
 
-    convertTemp(temp) {
-        return (Math.round(((temp - 32)/(9/5)) * 10))/10
+    convertToCelsius(fahrenheit) {
+        return (Math.round(((fahrenheit - 32)/(9/5)) * 10))/10
     }
 
     getLinkDisplayData(day) {
