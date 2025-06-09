@@ -149,6 +149,10 @@ class AppView {
         precipHeader.textContent = 'Chance of precipitation'
         precipContainer.append(precipHeader, precipByHour)
 
+        const iconContainer = this.createElement('div', 'iconContainer');
+        const iconsByHour = this.createElement('div', 'iconsByHour');
+        iconContainer.append(iconsByHour);
+
         day.forecastContent.forEach(hour => {
             const hourDiv = this.createElement('div', 'hour');
             hourDiv.textContent = `${day.forecastContent.indexOf(hour)}:00`;
