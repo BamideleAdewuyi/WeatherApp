@@ -70,6 +70,10 @@ class AppView {
         container.append(icon);
     }
 
+    getAllTemps() {
+        return document.querySelectorAll('.temp')
+    }
+
     displayLinks(nextWeekData) {
         while (this.dayTabs.firstChild) {
             this.dayTabs.removeChild(this.dayTabs.firstChild)
