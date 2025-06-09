@@ -12,6 +12,7 @@ class AppController {
         this.view.displayDayTab(nextWeekData, 0);
         this.view.displayForecastContent(nextWeekData[0])
         this.view.bindSelectDay(this.handleSelectDay)
+        this.view.input.value = this.model.getLocation()
     }
 
     handleSelectDay = (displayLink) => {
