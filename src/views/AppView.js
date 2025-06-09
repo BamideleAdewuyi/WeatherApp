@@ -27,10 +27,10 @@ class AppView {
         this.selectCelsius.name = 'toggleTemp'
         this.selectCelsius.id = 'celsius'
         this.selectCelsius.type = 'radio'
+        this.selectCelsius.checked = 'true'
         this.selectFahrenheit.name = 'toggleTemp'
         this.selectFahrenheit.id = 'fahrenheit'
         this.selectFahrenheit.type = 'radio'
-        this.selectFahrenheit.checked = 'true'
         this.toggleTempForm.append(this.selectCelsiusLabel, this.selectCelsius, this.selectFahrenheitLabel, this.selectFahrenheit)
         this.searchSection.append(this.form, this.toggleTempForm);
 
