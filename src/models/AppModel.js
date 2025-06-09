@@ -92,6 +92,10 @@ class AppModel {
         return (Math.round(((fahrenheit - 32)/(9/5)) * 10))/10
     }
 
+    convertToFahrenheit(celsius) {
+        return (Math.round((celsius * 9/5 + 32)*10))/10
+    }
+
     getLinkDisplayData(day) {
         return {
             date: new Date(this.getDate(day)).toLocaleDateString('en-gb', {weekday: 'short', day: 'numeric', month: 'short'}).split(',').join(''),
