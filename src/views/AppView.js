@@ -176,8 +176,9 @@ class AppView {
             precipitation.textContent = `${hour.precipProb}%`;
             precipByHour.append(precipitation)
 
+            this.getImage(hour.icon, iconsByHour, 'iconByHour')
         })
-        detailedConditionsContainer.append(tempContainer, feelsLikeTempContainer, humidityContainer, precipContainer)
+        detailedConditionsContainer.append(tempContainer, feelsLikeTempContainer, humidityContainer, precipContainer, iconContainer)
         this.forecastContent.append(hoursContainer, detailedConditionsContainer);
     }
 
