@@ -74,6 +74,10 @@ class AppView {
         return document.querySelectorAll('.temp')
     }
 
+    replaceTemp(oldTemp, newTemp) {
+        oldTemp.textContent = `${newTemp}°`
+    }
+
     displayLinks(nextWeekData) {
         while (this.dayTabs.firstChild) {
             this.dayTabs.removeChild(this.dayTabs.firstChild)
