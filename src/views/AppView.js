@@ -46,7 +46,7 @@ class AppView {
 
     getImage(iconName, container, iconClass) {
         const icon = this.createElement('img', iconClass);
-        const iconSource = ImageMap.iconName;
+        const iconSource = ImageMap[iconName];
         icon.src = iconSource;
         container.append(icon);
     }
@@ -58,7 +58,7 @@ class AppView {
 
         nextWeekData.forEach(day => {
             const li = this.createElement('li', 'displayLink');
-            li.id = `displayLink${nextWeekData.indexOf(day)}`
+            li.id = `displayLink${nextWeekData.indexOf(day)}`;
 
             const tabDay = this.createElement('h3', 'tabDay');
             const date = this.createElement('time');
@@ -67,14 +67,16 @@ class AppView {
 
             const linkWeatherDay = this.createElement('div', 'linkWeatherDay');
             const maxTemp = this.createElement('span', 'temp');
-            maxTemp.classList.add('linkMaxTemp')
+            maxTemp.classList.add('linkMaxTemp');
             maxTemp.textContent = day.linkDisplay.maxTemp + '°';
 
             const minTemp = this.createElement('span', 'temp');
-            minTemp.classList.add('linkMinTemp')
+            minTemp.classList.add('linkMinTemp');
             minTemp.textContent = day.linkDisplay.minTemp + '°';
 
+            
             linkWeatherDay.append(maxTemp, minTemp);
+            this.getImage(day.linkDisplay.icon, linkWeatherDay, 'displayLinkIcon');
 
             li.append(tabDay, linkWeatherDay);
 
