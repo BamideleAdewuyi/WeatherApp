@@ -3,7 +3,7 @@ class AppView {
     constructor() {
         this.container = this.getElement('.container');
 
-        // Search section
+        // Search Bar
         this.searchSection = this.createElement('section', 'locationSearch')
         this.form = this.createElement('form');
         this.input = this.createElement('input')
@@ -13,7 +13,26 @@ class AppView {
         this.submitButton.type = 'submit';
         this.submitButton.textContent = "Go"
         this.form.append(this.input, this.submitButton);
-        this.searchSection.append(this.form);
+
+        // Toggle Temperature
+        this.toggleTempForm = this.createElement('form', 'toggleTempForm');
+        this.selectCelsius = this.createElement('input', 'toggleTempButton');
+        this.selectCelsiusLabel = this.createElement('label');
+        this.selectCelsiusLabel.textContent = 'C°'
+        this.selectCelsiusLabel.for = 'celsius'
+        this.selectFahrenheit = this.createElement('input', 'toggleTempButton');
+        this.selectFahrenheitLabel = this.createElement('label')
+        this.selectFahrenheitLabel.textContent = 'F°'
+        this.selectFahrenheitLabel.for = 'fahrenheit'
+        this.selectCelsius.name = 'toggleTemp'
+        this.selectCelsius.id = 'celsius'
+        this.selectCelsius.type = 'radio'
+        this.selectFahrenheit.name = 'toggleTemp'
+        this.selectFahrenheit.id = 'fahrenheit'
+        this.selectFahrenheit.type = 'radio'
+        this.selectFahrenheit.checked = 'true'
+        this.toggleTempForm.append(this.selectCelsiusLabel, this.selectCelsius, this.selectFahrenheitLabel, this.selectFahrenheit)
+        this.searchSection.append(this.form, this.toggleTempForm);
 
         // Main area
         this.mainArea = this.createElement('div', 'mainArea');
