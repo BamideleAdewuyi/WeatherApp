@@ -5,8 +5,8 @@ class AppView {
 
         // Search Bar
         this.searchSection = this.createElement('section', 'locationSearch')
-        this.form = this.createElement('form');
-        this.input = this.createElement('input')
+        this.form = this.createElement('form', 'searchForm');
+        this.input = this.createElement('input', 'searchBar')
         this.input.type = 'text';
         this.input.placeholder = 'Search location';
         this.submitButton = this.createElement('button', 'submitButton');
