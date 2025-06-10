@@ -236,9 +236,7 @@ class AppView {
     bindRadioButtons(handler) {
         const radioButtons = document.querySelector('input[type = "radio"')
         radioButtons.forEach(button => {
-            button.addEventListener('checked = true', () => {
-                handler(button);
-            })
+            button.onchange = handler(button);
         })
     }
 
