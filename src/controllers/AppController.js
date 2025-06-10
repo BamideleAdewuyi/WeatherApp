@@ -5,6 +5,15 @@ class AppController {
         this.view.bindSearchLocation(this.handleSearchLocation)
     }
 
+    checkCelsius() {
+        if (this.view.selectCelsius.checked === true) {
+            this.view.getAllTemps().forEach(temp => {
+                const celsiusTemp = this.model.convertToCelsius(temp.textContent.substring(0, temp.textContent.length-1));
+                this.view.replaceTemp(temp, celsiusTemp);
+            })
+        }
+    }
+
     handleSearchLocation = async (userInput) => {
         await this.model.getLocationData(userInput);
         const nextWeekData = this.model.getNextWeekData()
@@ -12,12 +21,7 @@ class AppController {
         this.view.displayDayTab(nextWeekData, 0);
         this.view.displayForecastContent(nextWeekData[0]);
         this.view.bindSelectDay(this.handleSelectDay);
-        if (this.view.selectCelsius.checked === true) {
-            this.view.getAllTemps().forEach(temp => {
-                const celsiusTemp = this.model.convertToCelsius(temp.textContent.substring(0, temp.textContent.length-1));
-                this.view.replaceTemp(temp, celsiusTemp);
-            })
-        }
+        this.checkCelsius()
         this.view.input.value = this.model.getLocation()
     }
 
@@ -28,12 +32,7 @@ class AppController {
         this.view.displayDayTab(nextWeekData, index)
         this.view.displayForecastContent(nextWeekData[index])
         this.view.bindSelectDay(this.handleSelectDay)
-        if (this.view.selectCelsius.checked === true) {
-            this.view.getAllTemps().forEach(temp => {
-                const celsiusTemp = this.model.convertToCelsius(temp.textContent.substring(0, temp.textContent.length-1));
-                this.view.replaceTemp(temp, celsiusTemp);
-            })
-        }
+        this.checkCelsius()
     }
 }
 
