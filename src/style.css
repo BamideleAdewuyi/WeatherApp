@@ -64,6 +64,10 @@ button {
     display: flex;
 }
 
+.conditionsArea {
+    align-items: center;
+}
+
 .forecastContent, .detailedConditionsContainer {
     flex-direction: column;
 }
