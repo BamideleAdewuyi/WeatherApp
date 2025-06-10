@@ -233,6 +233,10 @@ class AppView {
         })
     }
 
+    bindRadioButtons(handler) {
+        
+    }
+
 }
 
 export default AppView;
