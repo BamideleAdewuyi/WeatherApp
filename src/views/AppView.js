@@ -123,6 +123,7 @@ class AppView {
 
         const conditionsArea = this.createElement('div', 'conditionsArea')
 
+        const minMaxTempContainer = this.createElement('div', 'minMaxTempContainer')
         const maxTemp = this.createElement('span', 'temp');
         maxTemp.classList.add('dayTabMaxTemp')
         maxTemp.textContent = nextWeekData[day].dayTabDisplay.maxTemp + '°';
@@ -131,13 +132,16 @@ class AppView {
         minTemp.classList.add('dayTabMinTemp')
         minTemp.textContent = nextWeekData[day].dayTabDisplay.minTemp + '°';
 
+        const riseAndSetContainer = this.createElement('div', 'riseAndSetContainer')
         const sunrise = this.createElement('span');
         sunrise.textContent = `Sunrise: ${nextWeekData[day].dayTabDisplay.sunrise}`;
 
         const sunset = this.createElement('span');
         sunset.textContent = `Sunset: ${nextWeekData[day].dayTabDisplay.sunset}`;
 
-        conditionsArea.append(maxTemp, minTemp, sunrise, sunset)
+        minMaxTempContainer.append(maxTemp, minTemp);
+        riseAndSetContainer.append(sunrise, sunset)
+        conditionsArea.append(minMaxTempContainer, riseAndSetContainer)
         this.getImage(nextWeekData[day].dayTabDisplay.icon, conditionsArea, 'dayTabIcon');
         li.append(dateArea, conditionsArea);
 
