@@ -16,6 +16,11 @@ ul {
     list-style-type: none;
 }
 
+.searchForm {
+    display: flex;
+    flex-direction: column;
+}
+
 .searchBar {
     width: 20em;
     padding: 5%;
@@ -43,7 +48,6 @@ ul {
     flex-direction: column;
     width: 100%;
 }
-
 
 .dayTabs, .forecastContent,
 .hoursContainer, .detailedConditionsContainer,
