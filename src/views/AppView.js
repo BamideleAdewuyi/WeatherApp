@@ -19,11 +19,11 @@ class AppView {
         this.selectCelsius = this.createElement('input', 'toggleTempButton');
         this.selectCelsiusLabel = this.createElement('label');
         this.selectCelsiusLabel.textContent = 'C°'
-        this.selectCelsiusLabel.for = 'celsius'
+        this.selectCelsiusLabel.setAttribute('for', 'celsius')
         this.selectFahrenheit = this.createElement('input', 'toggleTempButton');
         this.selectFahrenheitLabel = this.createElement('label')
         this.selectFahrenheitLabel.textContent = 'F°'
-        this.selectFahrenheitLabel.for = 'fahrenheit'
+        this.selectFahrenheitLabel.setAttribute('for', 'fahrenheit')
         this.selectCelsius.name = 'toggleTemp'
         this.selectCelsius.id = 'celsius'
         this.selectCelsius.type = 'radio'
@@ -234,7 +234,12 @@ class AppView {
     }
 
     bindRadioButtons(handler) {
-        
+        const radioButtons = document.querySelector('input[type = "radio"')
+        radioButtons.forEach(button => {
+            button.addEventListener('checked = true', () => {
+                handler(button);
+            })
+        })
     }
 
 }
