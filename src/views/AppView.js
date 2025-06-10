@@ -234,9 +234,9 @@ class AppView {
     }
 
     bindRadioButtons(handler) {
-        const radioButtons = document.querySelector('input[type = "radio"')
+        const radioButtons = document.querySelectorAll('input[type = "radio"')
         radioButtons.forEach(button => {
-            button.onchange = handler(button);
+            button.onchange = handler;
         })
     }
 
