@@ -16,6 +16,14 @@ ul {
     list-style-type: none;
 }
 
+.searchBar {
+    width: 20em;
+    padding: 5%;
+    text-align: center;
+    outline: 1px solid black;
+    border-radius: 5%;
+}
+
 .mainArea {
     justify-self: center;
     width: 70%;
