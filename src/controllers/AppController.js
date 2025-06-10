@@ -5,12 +5,16 @@ class AppController {
         this.view.bindSearchLocation(this.handleSearchLocation)
     }
 
+    celsiusConvert() {
+        this.view.getAllTemps().forEach(temp => {
+            const celsiusTemp = this.model.convertToCelsius(temp.textContent.substring(0, temp.textContent.length-1));
+            this.view.replaceTemp(temp, celsiusTemp);
+        })
+    }
+
     checkCelsius() {
         if (this.view.selectCelsius.checked === true) {
-            this.view.getAllTemps().forEach(temp => {
-                const celsiusTemp = this.model.convertToCelsius(temp.textContent.substring(0, temp.textContent.length-1));
-                this.view.replaceTemp(temp, celsiusTemp);
-            })
+            this.celsiusConvert()
         }
     }
 
@@ -33,6 +37,10 @@ class AppController {
         this.view.displayForecastContent(nextWeekData[index])
         this.view.bindSelectDay(this.handleSelectDay)
         this.checkCelsius()
+    }
+
+    handleTempButtons = (button) => {
+        
     }
 }
 
