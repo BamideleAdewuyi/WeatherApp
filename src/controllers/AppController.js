@@ -4,6 +4,7 @@ class AppController {
         this.view = view;
         this.view.bindSearchLocation(this.handleSearchLocation)
         this.view.bindRadioButtons(this.handleTempButtons)
+        this.handleSearchLocation("London")
     }
 
     celsiusConvert() {
