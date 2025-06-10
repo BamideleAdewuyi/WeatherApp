@@ -3,12 +3,20 @@ class AppController {
         this.model = model;
         this.view = view;
         this.view.bindSearchLocation(this.handleSearchLocation)
+        this.view.bindRadioButtons(this.handleTempButtons)
     }
 
     celsiusConvert() {
         this.view.getAllTemps().forEach(temp => {
             const celsiusTemp = this.model.convertToCelsius(temp.textContent.substring(0, temp.textContent.length-1));
             this.view.replaceTemp(temp, celsiusTemp);
+        })
+    }
+
+    fahrenheitConvert() {
+        this.view.getAllTemps().forEach(temp => {
+            const fahrenheitTemp = this.model.convertToFahrenheit(temp.textContent.substring(0, temp.textContent.length-1));
+            this.view.replaceTemp(temp, fahrenheitTemp);
         })
     }
 
@@ -39,9 +47,16 @@ class AppController {
         this.checkCelsius()
     }
 
-    handleTempButtons = (button) => {
-        
+    handleTempButtons = (event) => {
+        const button = event.target;
+        if (button.id === 'celsius') {
+            this.celsiusConvert()
+        };
+        if (button.id === 'fahrenheit') {
+            this.fahrenheitConvert()
+        }
     }
+
 }
 
 export default AppController;
