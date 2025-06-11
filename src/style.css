@@ -55,6 +55,12 @@ button {
     flex-direction: column;
 }
 
+.dayTab {
+    max-width: 100%;
+    min-width: 50%;
+    overflow: hidden;
+}
+
 .dayTabs, .forecastContent,
 .hoursContainer, .detailedConditionsContainer,
 .tempByHour, .feelsLikeTempByHour,
@@ -73,6 +79,7 @@ button {
 }
 
 .conditionsArea {
+    justify-content: space-around;
     align-items: center;
 }
 
