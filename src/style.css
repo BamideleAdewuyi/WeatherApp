@@ -82,6 +82,11 @@ button {
     color: rgb(117, 108, 108);
 }
 
+.toggleTempForm {
+    padding-left: 4%;
+    padding-top: 1%;
+}
+
 .conditionsArea {
     justify-content: space-around;
     align-items: center;
