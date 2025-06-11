@@ -59,8 +59,13 @@ button {
 .hoursContainer, .detailedConditionsContainer,
 .tempByHour, .feelsLikeTempByHour,
 .humidityByHour, .precipByHour,
-.conditionsArea, .iconsByHour {
+.conditionsArea, .iconsByHour,
+.minMaxTempContainer, .riseAndSetContainer {
     display: flex;
+}
+
+.minMaxTempContainer, .riseAndSetContainer {
+    flex-direction: column;
 }
 
 .dayTabMaxTemp {
