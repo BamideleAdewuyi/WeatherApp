@@ -78,6 +78,10 @@ button {
     font-size: x-large;
 }
 
+.dayTabMinTemp, .linkMinTemp {
+    color: rgb(117, 108, 108);
+}
+
 .conditionsArea {
     justify-content: space-around;
     align-items: center;
