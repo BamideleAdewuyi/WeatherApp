@@ -17,6 +17,10 @@
     "date-fns": "^4.1.0"
   },
   "scripts": {
+    "test": "echo \"Error: np test specified\" && exit 1",
+    "watch": "weback --watch",
+    "start": "webpack serve --open",
+    "build": "webpack",
     "deploy": "gh-pages -d dist"
   }
 }
